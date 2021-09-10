@@ -1,0 +1,18 @@
+
+<p><%= flash[:notice] %></p>
+
+
+<!--タイトルと本文は、以下のように記述することで取得できます。showアクションで@bookにデータが1件、格納されています-->
+<p>
+    <p><strong>本のタイトル:</strong> <%=@book.title %></p>
+    
+</p>
+
+<p>
+    <strong> 感想:</strong><%=@book.body %>
+</p>
+
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+|
+<%= link_to "Back", books_path %>
